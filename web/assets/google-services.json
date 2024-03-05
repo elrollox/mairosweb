@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "232771176643",
+    "project_id": "mairosapp-d0c6c",
+    "storage_bucket": "mairosapp-d0c6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232771176643:android:3013dd40cc79db73c03a76",
+        "android_client_info": {
+          "package_name": "mairos.com.materialmairos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQOY_-Rrg_fiEdCoyn3lTgcfBA3-JrrRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
