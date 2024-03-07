@@ -1,3 +1,5 @@
+
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -19,17 +21,24 @@ class ProductosLista extends StatelessWidget {
     }).toList();
 
     return ListView.builder(
+      padding: const EdgeInsets.only(right: 200),
       itemCount: productosFiltrados.length,
       itemBuilder: (context, index) {
         final producto = productosFiltrados[index].data();
         if (producto.containsKey('NOMBRE')) {
           return ListTile(
-            title: Text(producto['NOMBRE']),
-            subtitle: Text(producto['CATEGORÍA']),
+            title: Text(producto['NOMBRE'],
+              style:const TextStyle(
+                  color: Colors.black),),
+            subtitle: Text(
+                producto['CATEGORÍA'], style:const TextStyle(
+                color: Colors.black54),),
           );
         } else {
           return const ListTile(
-            title: Text('Documento sin nombre'),
+            title: Text(
+
+                'Documento sin nombre'),
           );
         }
       },
