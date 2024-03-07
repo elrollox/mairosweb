@@ -49,7 +49,7 @@ class ExamploteState extends State<Examplote> {
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       color: Colors.black,
-                      fontSize: 22.0,
+                      fontSize: 17.0,
                     ),
                   ),
                 ],
