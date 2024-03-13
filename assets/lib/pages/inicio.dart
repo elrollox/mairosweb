@@ -63,7 +63,7 @@ class InicioState extends State<Inicio> with SingleTickerProviderStateMixin {
         floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         body: Padding(
-            padding: const EdgeInsets.only(left: 8.0),
+            padding: const EdgeInsets.only(left: 8.0, right: 8.0),
             child: SafeArea(
               child: SingleChildScrollView(
                 child: Stack(
@@ -119,7 +119,7 @@ class InicioState extends State<Inicio> with SingleTickerProviderStateMixin {
 
 
                 SizedBox(
-                  width: 800,
+                  width: double.maxFinite,
                   height: 400,
                   child: FlutterMap(
                     options: MapOptions(

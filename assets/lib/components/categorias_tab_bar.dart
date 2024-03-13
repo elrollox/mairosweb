@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CategoriasTabBar extends StatelessWidget {
-  final List<String> categorias;
 
-  const CategoriasTabBar({
+   CategoriasTabBar({
     super.key,
-    required this.categorias,
   });
 
   @override
@@ -30,13 +28,8 @@ class CategoriasTabBar extends StatelessWidget {
       splashBorderRadius: BorderRadius.circular(13),
       labelColor: Colors.black,
       indicatorSize: TabBarIndicatorSize.label,
-      indicatorColor: Colors.white,
-      tabs: categorias.map((categoria) {
-        return Tab(
+      indicatorColor: Colors.white, tabs: [],
 
-          iconMargin: EdgeInsetsDirectional.zero,
-          text:  (categoria));
-      }).toList(),
     );
   }
 }

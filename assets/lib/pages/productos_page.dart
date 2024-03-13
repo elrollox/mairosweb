@@ -49,7 +49,7 @@ class _ProductosPageState extends State<ProductosPage> {
   Widget build(BuildContext context) {
     return Material(
         child: Scaffold(
-            appBar: MyAppBar(titulo: 'Holi',),
+            appBar: MyAppBar(titulo: 'Todos los materiales',),
             body:
             FutureBuilder(
               future: obtenerColeccionesYDocumentos(),

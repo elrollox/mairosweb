@@ -10,7 +10,7 @@ class Servicios extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const AppDrawer(),
-      appBar: MyAppBar(titulo: 'Servicios'),
+      appBar: MyAppBar(titulo: 'Carrito'),
       body: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance.collection('mairos').snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {

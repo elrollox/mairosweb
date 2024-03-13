@@ -58,7 +58,7 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             title: const Text(
-              'Servicios',
+              'Servicios Residenciales',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -68,11 +68,11 @@ class AppDrawer extends StatelessWidget {
             leading: const Icon(
 
                 Icons.home_repair_service),
-            onTap: () => {Navigator.pushNamed(context, '/servicios')},
+            onTap: () => {Navigator.pushNamed(context, '/second')},
           ),
           ListTile(
             title: const Text(
-              'Otra Page',
+              'Todos los materiales',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -88,7 +88,7 @@ class AppDrawer extends StatelessWidget {
                 ),
                 Icons.home_repair_service),
             onTap: () => {
-              Navigator.pushNamed(context, '/hero'),
+              Navigator.pushNamed(context, '/otrapage'),
             },
           ),
           ListTile(
@@ -110,28 +110,10 @@ class AppDrawer extends StatelessWidget {
                 Icons.calendar_month),
             onTap: () => {Navigator.pushNamed(context, '/calendario')},
           ),
+
           ListTile(
             title: const Text(
-              'Otra Page',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w600),
-            ),
-            leading: const Icon(
-                color: Color.fromARGB(
-                  255,
-                  5,
-                  220,
-                  200,
-                ),
-                Icons.calendar_month),
-            onTap: () => {Navigator.pushNamed(context, '/otrapage')},
-          ),
-          ListTile(
-            title: const Text(
-              'Servicios Residenciales',
+              'Carrito',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -140,8 +122,8 @@ class AppDrawer extends StatelessWidget {
             ),
             leading: const Icon(
 
-                Icons.design_services_outlined),
-            onTap: () => {Navigator.pushNamed(context, '/second')},
+                Icons.shopping_cart_rounded),
+            onTap: () => {Navigator.pushNamed(context, '/servicios')},
           ),
         ],
       ),
