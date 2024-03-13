@@ -8,37 +8,38 @@ class ProductosLista extends StatelessWidget {
   final String categoria;
 
   const ProductosLista({
-    Key? key,
+    super.key,
     required this.productos,
     required this.categoria,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     final productosFiltrados = productos.where((producto) {
       final productoData = producto.data();
-      return productoData.containsKey('CATEGORÍA') && productoData['CATEGORÍA'] == categoria;
+      return productoData.containsKey('CATEGORÍA') &&
+          productoData['CATEGORÍA'] == categoria;
     }).toList();
 
     return ListView.builder(
-      padding: const EdgeInsets.only(right: 200),
       itemCount: productosFiltrados.length,
       itemBuilder: (context, index) {
         final producto = productosFiltrados[index].data();
         if (producto.containsKey('NOMBRE')) {
           return ListTile(
-            title: Text(producto['NOMBRE'],
-              style:const TextStyle(
-                  color: Colors.black),),
+            key: ValueKey(producto['NOMBRE']), // Usar un valor único para la clave
+            title: Text(
+              producto['NOMBRE'],
+              style: const TextStyle(color: Colors.black),
+            ),
             subtitle: Text(
-                producto['CATEGORÍA'], style:const TextStyle(
-                color: Colors.black54),),
+              producto['CATEGORÍA'],
+              style: const TextStyle(color: Colors.black54),
+            ),
           );
         } else {
           return const ListTile(
-            title: Text(
-
-                'Documento sin nombre'),
+            title: Text('Documento sin nombre'),
           );
         }
       },
